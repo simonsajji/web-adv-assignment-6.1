@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Baloo+Bhaijaan+2&family=Comfortaa&family=Concert+One&family=Dosis:wght@300&family=Genos:wght@300&family=Lato&family=Montserrat:wght@300&family=Pacifico&family=Permanent+Marker&family=Special+Elite&family=Voltaire&display=swap');
+
+:root{
+    --primary-color:rgb(231, 226, 226);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+   padding: 0;
+   margin: 0;
+}
+body{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Comfortaa', cursive;
+    background-image: url("./bg.svg");
+}
+.container{
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    background-color:var(--primary-color);
+    border-radius: 15px;
+    padding-top: 20px;
+     box-shadow: rgba(17, 17, 17, 0.85) 5px 50px 30px -5px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    
+}
+.title{
+    font-family: 'Pacifico', cursive;
+    color:rgba(78, 32, 17, 0.678);
+    font-size:2.2rem;
+    margin:0;
+}
+
+.utility-ctn{
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    justify-content:space-around;
+    align-items:center ;
+}
+
+.heading{
+    color: #af3621;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.3rem;
+    font-weight:bolder;
+}
+
+.reset-btn{
+    background-color: transparent;
+    border: none;
+    cursor:pointer;
+    padding: 10px;
+    font-size: 1.3rem;
+    color:rgb(16, 104, 16);
+    font-family: 'Comfortaa', cursive;
+    font-weight: bolder;
+}
+
+.game-box{  
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap:10px;
+    background-color: #1e1e1e;
+}
+.cell{
+    width:110px;
+    height:110px;
+    background-color: var(--primary-color);
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.X::before{
+    content: "X";
+    color:rgba(168, 24, 24,0.8);
+}
+.O::before{
+    content: "O";
+    color:rgba(16, 16, 156,.8);
+}
+
+.modal{
+
+    width:100vw;
+    height:100vh;
+    background-color: rgba(22, 22, 22,0.4);
+    z-index:    10;
+    top:        0; 
+    left:       0; 
+    position:   fixed; 
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.hide_modal{
+    display:none;
+}
+
+.show_modal{
+    display:flex;
+}
+
+.result{
+    width:50%;
+    height:60%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color:white;
+    border:0;
+    border-radius:2rem;
+    align-items: center;
+    
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+}
+.congrats{
+   flex:100%;
+   background: -webkit-linear-gradient(rgb(1, 141, 255),rgb(124, 126, 13), rgb(255, 60, 1),rgb(153, 1, 255));
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+.btn_container{
+    flex:100%;
+}
+
+#r{
+    
+    font-size:2.5rem;
+    background: -webkit-linear-gradient(rgb(8, 34, 58),rgb(179, 179, 179),rgb(209, 63, 27),rgb(46, 94, 36));
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+#close_btn{
+    width: 10%;
+    float:right;
+    margin:2%;
+    height:4rem;
+    background-color: rgba(19, 18, 18,0.4);
+    color:rgb(58, 56, 56);
+    border:0;
+    font-size:1.8rem;
+    font-weight: bolder;
+
+}
